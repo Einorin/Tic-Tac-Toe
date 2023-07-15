@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: aliceblue;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 800;
+}
+
+body{
+    background-color: #111827;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+    width: 100px;
+    color: white;
+    font-size: 40px;
+    letter-spacing: -1px;
+}
+
+.game-board{
+    display: grid;
+    grid-template-columns: repeat(3,150px);
+    grid-template-rows: repeat(3,150px);
+    border: white solid;
+    align-self: center;
+    margin: 40px;
+    border-radius: 4px;
+}
+
+.game-board div,
+.game-board button{
+    background-color: #f3f4f6;
+    border: #111827 solid 1px;
+    font-size: 100px;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 100;
+    color: #78716c;
+}
+.btns{
+    align-self: center;
+}
+.btns button,
+.btns select,
+option{
+    background-color: white;
+    color: black;
+    width: 100px;
+    font-size: 1rem;
+    border-radius: 12px;
+}
+
+.game-board div:first-child,
+.game-board div:nth-child(2),
+.game-board div:nth-child(3){
+    border-top: none;
+}
+
+.game-board div:nth-child(1),
+.game-board div:nth-child(4),
+.game-board div:nth-child(7){
+    border-left: none;
+}
+
+.game-board div:nth-child(3),
+.game-board div:nth-child(6),
+.game-board div:nth-child(9){
+    border-right: none;
+}
+
+.game-board div:nth-child(7),
+.game-board div:nth-child(8),
+.game-board div:nth-child(9){
+    border-bottom: none;
+}
