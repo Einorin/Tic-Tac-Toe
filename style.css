@@ -55,6 +55,7 @@ option{
     width: 100px;
     font-size: 1rem;
     border-radius: 12px;
+    cursor: pointer;
 }
 
 .game-board div:first-child,
@@ -79,4 +80,24 @@ option{
 .game-board div:nth-child(8),
 .game-board div:nth-child(9){
     border-bottom: none;
+}
+.game-board div{
+    cursor: pointer;
+}
+
+.winining-message{
+    display: none;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.9);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 5rem;
+}
+.winining-message.show{
+    display: flex;
 }
