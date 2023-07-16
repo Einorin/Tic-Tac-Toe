@@ -45,7 +45,7 @@ const Gameboard = (()=>{
         winningMessage.classList.add('show');
         winningMessage.textContent = currentPlayer.draw();
         setTimeout(()=>{
-            winningMessage.remove('show')
+            winningMessage.classList.remove('show')
         },2000)
     }
 
@@ -63,8 +63,8 @@ const Gameboard = (()=>{
             winMsg()
             restartGame()
           }else if(gameBoard.every(position => position !== "")){
-            drawMsg()
-            restartGame()
+            drawMsg();
+            restartGame();
           }
         };
     
