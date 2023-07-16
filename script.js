@@ -1,11 +1,10 @@
-
-
 const Gameboard = (()=>{
     let gameBoard = ["","","","","","","","",""];
     const restart = document.querySelector('#restart');
     const boardBoxes = document.querySelectorAll('.game-board div')
     let currentPlayer = null;
     const winningMessage = document.querySelector('.winining-message');
+
 
     const displayController = () =>{
         currentPlayer = player1;
@@ -41,6 +40,15 @@ const Gameboard = (()=>{
         },2000)
     }
 
+
+    const drawMsg = function (){
+        winningMessage.classList.add('show');
+        winningMessage.textContent = currentPlayer.draw();
+        setTimeout(()=>{
+            winningMessage.remove('show')
+        },2000)
+    }
+
     const winCondition = function(){
         if (
             (currentPlayer.mark === gameBoard[0] && currentPlayer.mark === gameBoard[1] && currentPlayer.mark === gameBoard[2]) ||
@@ -55,7 +63,7 @@ const Gameboard = (()=>{
             winMsg()
             restartGame()
           }else if(gameBoard.every(position => position !== "")){
-            alert(currentPlayer.draw());
+            drawMsg()
             restartGame()
           }
         };
